@@ -7,7 +7,7 @@ import (
 	g "github.com/onsi/ginkgo"
 	o "github.com/onsi/gomega"
 	routev1 "github.com/openshift/api/route/v1"
-	"github.com/tnozicka/openshift-acme/pkg/acme/client/builder"
+	"github.com/ferrymanders/openshift-acme/pkg/acme/client/builder"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -15,11 +15,11 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/watch"
 
-	"github.com/tnozicka/openshift-acme/pkg/api"
-	"github.com/tnozicka/openshift-acme/pkg/cert"
-	"github.com/tnozicka/openshift-acme/pkg/util"
-	"github.com/tnozicka/openshift-acme/test/e2e/framework"
-	exutil "github.com/tnozicka/openshift-acme/test/e2e/openshift/util"
+	"github.com/ferrymanders/openshift-acme/pkg/api"
+	"github.com/ferrymanders/openshift-acme/pkg/cert"
+	"github.com/ferrymanders/openshift-acme/pkg/util"
+	"github.com/ferrymanders/openshift-acme/test/e2e/framework"
+	exutil "github.com/ferrymanders/openshift-acme/test/e2e/openshift/util"
 )
 
 const (
@@ -149,7 +149,7 @@ var _ = g.Describe("Routes", func() {
 			ObjectMeta: metav1.ObjectMeta{
 				// Test that the exposing goes fine even with a subdomain in name as other objects
 				// whose name might be based on this one may not support it if not normalized.
-				// See https://github.com/tnozicka/openshift-acme/issues/50
+				// See https://github.com/ferrymanders/openshift-acme/issues/50
 				Name: "subdomain.test",
 				Annotations: map[string]string{
 					"kubernetes.io/tls-acme": "true",

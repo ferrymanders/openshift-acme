@@ -11,7 +11,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/tnozicka/openshift-acme/pkg/cert"
+	"github.com/ferrymanders/openshift-acme/pkg/cert"
 )
 
 func generateCertificate(hosts []string, notBefore, notAfter time.Time) (*cert.CertPemData, error) {

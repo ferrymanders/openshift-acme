@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: sshd
-        image: docker.io/tnozicka/sshd
+        image: docker.io/ferrymanders/sshd
         ports:
         - containerPort: 2222
         - containerPort: 5000

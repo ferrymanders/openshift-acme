@@ -12,6 +12,6 @@ oc adm policy add-cluster-role-to-user openshift-acme -z openshift-acme
 If you want to deploy it directly from GitHub use:
 
 ```bash
-oc create -fhttps://raw.githubusercontent.com/tnozicka/openshift-acme/master/deploy/letsencrypt-staging/cluster-wide/{clusterrole,serviceaccount,imagestream,deployment}.yaml
+oc create -fhttps://raw.githubusercontent.com/ferrymanders/openshift-acme/master/deploy/letsencrypt-staging/cluster-wide/{clusterrole,serviceaccount,imagestream,deployment}.yaml
 oc adm policy add-cluster-role-to-user openshift-acme -z openshift-acme
 ```

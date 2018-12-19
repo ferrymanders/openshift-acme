@@ -32,13 +32,13 @@ import (
 	"k8s.io/client-go/tools/record"
 	"k8s.io/client-go/util/workqueue"
 
-	"github.com/tnozicka/openshift-acme/pkg/acme/challengeexposers"
-	acmeclient "github.com/tnozicka/openshift-acme/pkg/acme/client"
-	acmeclientbuilder "github.com/tnozicka/openshift-acme/pkg/acme/client/builder"
-	"github.com/tnozicka/openshift-acme/pkg/api"
-	"github.com/tnozicka/openshift-acme/pkg/cert"
-	routeutil "github.com/tnozicka/openshift-acme/pkg/route"
-	"github.com/tnozicka/openshift-acme/pkg/util"
+	"github.com/ferrymanders/openshift-acme/pkg/acme/challengeexposers"
+	acmeclient "github.com/ferrymanders/openshift-acme/pkg/acme/client"
+	acmeclientbuilder "github.com/ferrymanders/openshift-acme/pkg/acme/client/builder"
+	"github.com/ferrymanders/openshift-acme/pkg/api"
+	"github.com/ferrymanders/openshift-acme/pkg/cert"
+	routeutil "github.com/ferrymanders/openshift-acme/pkg/route"
+	"github.com/ferrymanders/openshift-acme/pkg/util"
 )
 
 const (

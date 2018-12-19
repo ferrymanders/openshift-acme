@@ -11,8 +11,8 @@ import (
 	"github.com/golang/glog"
 	routev1 "github.com/openshift/api/route/v1"
 	routeclientset "github.com/openshift/client-go/route/clientset/versioned"
-	routeutil "github.com/tnozicka/openshift-acme/pkg/route"
-	"github.com/tnozicka/openshift-acme/pkg/util"
+	routeutil "github.com/ferrymanders/openshift-acme/pkg/route"
+	"github.com/ferrymanders/openshift-acme/pkg/util"
 	"golang.org/x/crypto/acme"
 	corev1 "k8s.io/api/core/v1"
 	kapierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -25,8 +25,8 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/record"
 
-	"github.com/tnozicka/openshift-acme/pkg/acme/challengeexposers"
-	"github.com/tnozicka/openshift-acme/pkg/api"
+	"github.com/ferrymanders/openshift-acme/pkg/acme/challengeexposers"
+	"github.com/ferrymanders/openshift-acme/pkg/api"
 )
 
 const (

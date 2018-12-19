@@ -13,8 +13,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/watch"
 
-	"github.com/tnozicka/openshift-acme/pkg/api"
-	routeutil "github.com/tnozicka/openshift-acme/pkg/route"
+	"github.com/ferrymanders/openshift-acme/pkg/api"
+	routeutil "github.com/ferrymanders/openshift-acme/pkg/route"
 )
 
 func IsManaged(obj metav1.Object) bool {

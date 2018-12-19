@@ -12,7 +12,7 @@ import (
 	"github.com/golang/glog"
 	"golang.org/x/crypto/acme"
 
-	"github.com/tnozicka/openshift-acme/pkg/acme/challengeexposers"
+	"github.com/ferrymanders/openshift-acme/pkg/acme/challengeexposers"
 )
 
 var once sync.Once

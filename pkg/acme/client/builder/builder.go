@@ -16,7 +16,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	kcorelistersv1 "k8s.io/client-go/listers/core/v1"
 
-	acmeclient "github.com/tnozicka/openshift-acme/pkg/acme/client"
+	acmeclient "github.com/ferrymanders/openshift-acme/pkg/acme/client"
 )
 
 // TODO: consider moving constants into common package

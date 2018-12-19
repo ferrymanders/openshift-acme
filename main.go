@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/tnozicka/openshift-acme/cmd"
+	"github.com/ferrymanders/openshift-acme/cmd"
 )
 
 func main() {

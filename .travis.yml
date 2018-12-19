@@ -1,6 +1,6 @@
 language: go
 
-go_import_path: github.com/tnozicka/openshift-acme
+go_import_path: github.com/ferrymanders/openshift-acme
 
 go:
 - 1.8.x
@@ -118,8 +118,8 @@ after_success:
   set -e
   if [[ ${AUTHORITATIVE} && "${TRAVIS_BRANCH}" == "master" && "${TRAVIS_PULL_REQUEST}" == "false" ]]; then
     docker login -u="${DOCKER_USER}" -p="${DOCKER_PASSWD}"
-    docker tag openshift-acme-candidate docker.io/tnozicka/openshift-acme
-    docker push docker.io/tnozicka/openshift-acme
+    docker tag openshift-acme-candidate docker.io/ferrymanders/openshift-acme
+    docker push docker.io/ferrymanders/openshift-acme
   fi
 
 notifications:

@@ -28,11 +28,11 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.com/tnozicka/openshift-acme/pkg/acme/challengeexposers"
-	acmeclientbuilder "github.com/tnozicka/openshift-acme/pkg/acme/client/builder"
-	cmdutil "github.com/tnozicka/openshift-acme/pkg/cmd/util"
-	routecontroller "github.com/tnozicka/openshift-acme/pkg/controllers/route"
-	"github.com/tnozicka/openshift-acme/pkg/signals"
+	"github.com/ferrymanders/openshift-acme/pkg/acme/challengeexposers"
+	acmeclientbuilder "github.com/ferrymanders/openshift-acme/pkg/acme/client/builder"
+	cmdutil "github.com/ferrymanders/openshift-acme/pkg/cmd/util"
+	routecontroller "github.com/ferrymanders/openshift-acme/pkg/controllers/route"
+	"github.com/ferrymanders/openshift-acme/pkg/signals"
 )
 
 const (
@@ -65,7 +65,7 @@ func NewOpenShiftAcmeCommand(in io.Reader, out, err io.Writer) *cobra.Command {
 	rootCmd := &cobra.Command{
 		Use:   "openshift-acme",
 		Short: "openshift-acme is a controller for Kubernetes (and OpenShift) which will obtain SSL certificates from ACME provider (like \"Let's Encrypt\")",
-		Long:  "openshift-acme is a controller for Kubernetes (and OpenShift) which will obtain SSL certificates from ACME provider (like \"Let's Encrypt\")\n\nFind more information at https://github.com/tnozicka/openshift-acme",
+		Long:  "openshift-acme is a controller for Kubernetes (and OpenShift) which will obtain SSL certificates from ACME provider (like \"Let's Encrypt\")\n\nFind more information at https://github.com/ferrymanders/openshift-acme",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) != 0 {
 				return cmdutil.UsageError(cmd, "Unexpected args: %v", args)

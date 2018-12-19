@@ -13,8 +13,8 @@ GO_FILES :=$(shell find . -name '*.go' -not -path './vendor/*' -print)
 GO_PACKAGES :=./cmd/... ./pkg/...
 GO_PACKAGES_TEST :=./test/...
 GO_PACKAGES_ALL :=$(GO_PACKAGES) $(GO_PACKAGES_TEST)
-GO_IMPORT_PATH :=github.com/tnozicka/openshift-acme
-IMAGE_NAME :=docker.io/tnozicka/openshift-acme
+GO_IMPORT_PATH :=github.com/ferrymanders/openshift-acme
+IMAGE_NAME :=docker.io/ferrymanders/openshift-acme
 
 # we intentionaly don't specify this value because test are making changes to the cluster so we wan't user to configure it explicitely
 GO_ET_KUBECONFIG :="<unspecified>"
@@ -86,5 +86,5 @@ update-vendor:
 
 .PHONY: image
 image:
-	s2i build . --copy docker.io/tnozicka/s2i-centos7-golang $(IMAGE_NAME) -e APP_URI=$(GO_IMPORT_PATH) --runtime-image=docker.io/tnozicka/s2i-centos7-golang-runtime --runtime-artifact=/opt/app-root/src/bin/app:bin/
+	s2i build . --copy docker.io/ferrymanders/s2i-centos7-golang $(IMAGE_NAME) -e APP_URI=$(GO_IMPORT_PATH) --runtime-image=docker.io/ferrymanders/s2i-centos7-golang-runtime --runtime-artifact=/opt/app-root/src/bin/app:bin/
 
