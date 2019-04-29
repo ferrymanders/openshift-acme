@@ -520,7 +520,7 @@ func (rc *RouteController) handle(key string) error {
 				},
 			}
 			template.DNSNames = append(template.DNSNames, routeReadOnly.Spec.Host)
-			privateKey, err := rsa.GenerateKey(cryptorand.Reader, 4096)
+			privateKey, err := rsa.GenerateKey(cryptorand.Reader, 2048)
 			if err != nil {
 				return fmt.Errorf("failed to generate RSA key: %v", err)
 			}
