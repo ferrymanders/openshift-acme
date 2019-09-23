@@ -512,7 +512,7 @@ func (rc *RouteController) handle(key string) error {
 			fallthrough
 
 		case acme.StatusValid:
-			glog.V(4).Infof("Authorization %q for Route %s successfully validated", authorization.URI, key)
+			glog.V(4).Infof("Authorization %q for Route %s has been successfully validated", authorization.URI, key)
 			// provision cert
 			template := x509.CertificateRequest{
 				Subject: pkix.Name{
